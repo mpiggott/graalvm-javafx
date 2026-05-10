@@ -5,18 +5,32 @@
 	<groupId>ca.pigggott.sample</groupId>
 	<artifactId>graal.sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>25</maven.compiler.release>
+		<javafx.version>25.0.3</javafx.version>
 		<graalvm.version>25.0.3</graalvm.version>
 	</properties>
 
-	<dependencies>
+	<modules>
+		<module>javafx-graal-feature</module>
+		<module>javafx-sample</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
-			<version>25.0.3</version>
+			<version>${javafx.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>${javafx.version}</version>
 		</dependency>
 
 		<dependency>
@@ -32,61 +46,25 @@
 			<version>${graalvm.version}</version>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
+
+		<dependency>
+			<groupId>ca.pigggott.sample</groupId>
+			<artifactId>javafx-graal-feature</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.openjfx</groupId>
-				<artifactId>javafx-maven-plugin</artifactId>
-				<version>0.0.8</version>
-				<executions>
-					<execution>
-						<!-- Default configuration for running -->
-						<!-- Usage: mvn clean javafx:run -->
-						<id>default-cli</id>
-						<configuration>
-							<mainClass>ca.pigggott.sample.graal.App</mainClass>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<!-- 
-					https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
-				-->
-				<groupId>org.graalvm.buildtools</groupId>
-				<artifactId>native-maven-plugin</artifactId>
-				<version>1.1.0</version>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<id>build-native</id>
-						<goals>
-							<goal>compile-no-fork</goal>
-						</goals>
-						<phase>package</phase>
-					</execution>
-				</executions>
-				<configuration>
-					<mainClass>ca.pigggott.sample.graal.App</mainClass>
-					<verbose>true</verbose>
-					<quickBuild>true</quickBuild>
-					<buildArgs combine.children="append">
-						<buildArg>--enable-sbom=false</buildArg>
-						<buildArg>-H:+UnlockExperimentalVMOptions</buildArg>
-					</buildArgs>
-					<jvmArgs>
-						<jvmArg>--enable-native-access=ALL-UNNAMED</jvmArg>
-					</jvmArgs>
-				</configuration>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.15.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 	<profiles>
@@ -100,19 +78,6 @@
 			<properties>
 				<os.family>windows</os.family>
 			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.graalvm.buildtools</groupId>
-						<artifactId>native-maven-plugin</artifactId>
-						<configuration>
-							<buildArgs combine.children="append">
-								<buildArg>-H:Preserve=package=com.sun.prism.d3d.*</buildArg>
-							</buildArgs>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 		<profile>
 			<id>mac</id>
@@ -124,20 +89,6 @@
 			<properties>
 				<os.family>mac</os.family>
 			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.graalvm.buildtools</groupId>
-						<artifactId>native-maven-plugin</artifactId>
-						<configuration>
-							<buildArgs combine.children="append">
-								<buildArg>-H:Preserve=package=com.sun.prism.es2.*</buildArg>
-								<buildArg>-H:Preserve=package=com.sun.prism.mtl.*</buildArg>
-							</buildArgs>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 		<profile>
 			<id>linux</id>

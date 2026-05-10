@@ -31,6 +31,7 @@ import org.graalvm.nativeimage.hosted.Feature;
 import org.graalvm.nativeimage.hosted.Feature.BeforeAnalysisAccess;
 import org.graalvm.nativeimage.hosted.Feature.DuringSetupAccess;
 import org.graalvm.nativeimage.hosted.RuntimeJNIAccess;
+import org.graalvm.nativeimage.hosted.RuntimeReflection;
 import org.graalvm.nativeimage.hosted.RuntimeResourceAccess;
 
 import com.oracle.svm.core.jdk.NativeLibrarySupport;
@@ -44,17 +45,17 @@ public class FxFeature implements Feature {
 		if (isWin()) {
 			System.out.println("beforeAnalysis - win");
 			registerLibraries(FxWin.LIBS);
-			registerJni(access, FxWin.JNI);
+			registerAccess(access, FxWin.JNI);
 		}
 		else if (isMac()) {
 			System.out.println("beforeAnalysis - mac");
 			registerLibraries(FxMac.LIBS);
-			registerJni(access, FxMac.JNI);
+			registerAccess(access, FxMac.JNI);
 		}
 		else {
 			System.out.println("beforeAnalysis - other");
 			registerLibraries(FxUnix.LIBS);
-			registerJni(access, FxUnix.JNI);
+			registerAccess(access, FxUnix.JNI);
 		}
 	}
 
@@ -71,7 +72,7 @@ public class FxFeature implements Feature {
 
 	}
 
-	private static void registerJni(BeforeAnalysisAccess access, List<String> classes) {
+	private static void registerAccess(BeforeAnalysisAccess access, List<String> classes) {
 		for (String className : classes) {
 				Class<?> clazz = access.findClassByName(className);
 				if (clazz != null) {
@@ -79,6 +80,10 @@ public class FxFeature implements Feature {
 					RuntimeJNIAccess.register(clazz.getDeclaredConstructors());
 					RuntimeJNIAccess.register(clazz.getDeclaredFields());
 					RuntimeJNIAccess.register(clazz.getDeclaredMethods());
+					RuntimeReflection.register(clazz);
+					RuntimeReflection.register(clazz.getDeclaredConstructors());
+					RuntimeReflection.register(clazz.getDeclaredFields());
+					RuntimeReflection.register(clazz.getDeclaredMethods());
 				}
 		}
 	}

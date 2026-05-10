@@ -40,6 +40,8 @@ final class FxUnix {
 
 	static final List<String> JNI = List.of(
 			"com.sun.glass.ui.Application",
+			"com.sun.glass.ui.gtk.GtkPlatformFactory",
+			"com.sun.javafx.tk.quantum.QuantumToolkit",
 			"com.sun.prism.GraphicsPipeline",
 			"com.sun.prism.es2.X11GLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
@@ -53,12 +55,20 @@ final class FxUnix {
 			"com.sun.glass.ui.gtk.GtkTimer",
 			"com.sun.glass.ui.gtk.GtkMenuBarDelegate",
 			"com.sun.glass.ui.gtk.GtkMenuDelegate",
-			"com.sun.glass.ui.gtk.GtkPlatformFactory",
 			"com.sun.glass.ui.gtk.GtkCommonDialogs",
 			"com.sun.glass.ui.gtk.GtkPasteboard",
 			"com.sun.glass.ui.gtk.GtkAccessible",
-			"com.sun.glass.ui.gtk.GtkClipboard"
+			"com.sun.glass.ui.gtk.GtkClipboard",
+			"com.sun.javafx.font.PrismFontFactory",
+			"com.sun.javafx.font.PrismFontLoader",
+			"com.sun.javafx.font.fontconfig.FCFontFactory",
+			"com.sun.javafx.font.freetype.FTFactory",
+			"com.sun.javafx.font.PGFont",
+			"com.sun.javafx.font.LogicalFont",
+			"com.sun.javafx.font.fontconfig.FontConfig",
+			"com.sun.javafx.font.freetype.FTFontFile",
+			"com.sun.prism.es2.X11GLContext"
 	);
 
-	static final List<String> PREREG = List.of("prism_sw", "prism_es2", "glassgtk3", "glass", "glass_monocle");;
+	static final List<String> PREREG = List.of("prism_sw", "prism_es2", "glassgtk3", "glass", "glass_monocle", "javafx_font", "javafx_font_freetype", "javafx_font_pango", "javafx_iio");;
 }

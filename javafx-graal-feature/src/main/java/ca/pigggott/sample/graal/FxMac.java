@@ -41,6 +41,7 @@ final class FxMac {
 
 	static final List<String> JNI = List.of(
 			"com.sun.glass.ui.Application",
+			"com.sun.javafx.tk.quantum.QuantumToolkit",
 			"com.sun.prism.GraphicsPipeline",
 			"com.sun.prism.es2.MacGLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
@@ -58,7 +59,13 @@ final class FxMac {
 			"com.sun.glass.ui.mac.MacCommonDialogs",
 			"com.sun.glass.ui.mac.MacPasteboard",
 			"com.sun.glass.ui.mac.MacAccessible",
-			"com.sun.glass.ui.mac.MacClipboard"
+			"com.sun.glass.ui.mac.MacClipboard",
+			"com.sun.javafx.font.PrismFontFactory",
+			"com.sun.javafx.font.PrismFontLoader",
+			"com.sun.javafx.font.coretext.CTFactory",
+			"com.sun.javafx.font.PGFont",
+			"com.sun.javafx.font.LogicalFont",
+			"com.sun.javafx.font.coretext.CTFontFile"
 	);
 
 }

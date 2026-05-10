@@ -29,6 +29,7 @@ final class FxWin {
 
 	static final List<String> JNI = List.of(
 			"com.sun.glass.ui.Application",
+			"com.sun.javafx.tk.quantum.QuantumToolkit",
 			"com.sun.prism.GraphicsPipeline",
 			"com.sun.glass.ui.win.WinApplication",
 			"com.sun.glass.ui.win.WinWindow",
@@ -44,7 +45,14 @@ final class FxWin {
 			"com.sun.glass.ui.win.WinClipboard",
 			"com.sun.prism.d3d.D3DPipeline",
 			"com.sun.prism.d3d.D3DContext",
-			"com.sun.prism.sw.SWPipeline");
+			"com.sun.prism.sw.SWPipeline",
+			"com.sun.javafx.font.PrismFontFactory",
+			"com.sun.javafx.font.PrismFontLoader",
+			"com.sun.javafx.font.directwrite.DWFactory",
+			"com.sun.javafx.font.PGFont",
+			"com.sun.javafx.font.LogicalFont",
+			"com.sun.javafx.font.directwrite.DWFontFile"
+	);
 
 	static final List<String> PREREG = List.of("prism_sw", "glass", "glass_monocle", "javafx_font", "javafx_iio");
 

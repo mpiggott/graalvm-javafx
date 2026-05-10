@@ -72,6 +72,25 @@
       ]
     },
     {
+      "type": "com.sun.glass.ui.Clipboard",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "contentChanged",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.glass.ui.Cursor",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "ptr"
+        }
+      ]
+    },
+    {
       "type": "com.sun.glass.ui.Menu",
       "jniAccessible": true,
       "methods": [

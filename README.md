@@ -9,9 +9,6 @@ Note: this may not be a minimal configuration and may included redundant or irre
 
 When running a binary consider using `-Dprism.verbose=true` which turns on debug logging.
 
-
-
-
 ## Mac
 
 This starts without errors but no user interface appears. My understanding is that the issue here is that MacOS requires the UI thread to be

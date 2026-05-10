@@ -257,6 +257,15 @@
           ]
         },
         {
+          "name": "notifyKey",
+          "parameterTypes": [
+            "int",
+            "int",
+            "char[]",
+            "int"
+          ]
+        },
+        {
           "name": "notifyMenu",
           "parameterTypes": [
             "int",
@@ -294,6 +303,24 @@
           "parameterTypes": [
             "int",
             "int"
+          ]
+        },
+        {
+          "name": "notifyScroll",
+          "parameterTypes": [
+            "int",
+            "int",
+            "int",
+            "int",
+            "double",
+            "double",
+            "int",
+            "int",
+            "int",
+            "int",
+            "int",
+            "double",
+            "double"
           ]
         },
         {

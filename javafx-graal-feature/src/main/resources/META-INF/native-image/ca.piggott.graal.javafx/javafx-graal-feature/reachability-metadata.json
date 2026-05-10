@@ -5981,6 +5981,9 @@
       "glob": "vcruntime140_1.dll"
     },
     {
+      "glob": "com/sun/prism/es2/glsl/*.frag"
+    },
+    {
       "module": "java.base",
       "glob": "jdk/internal/icu/impl/data/icudt76b/ubidi.icu"
     },

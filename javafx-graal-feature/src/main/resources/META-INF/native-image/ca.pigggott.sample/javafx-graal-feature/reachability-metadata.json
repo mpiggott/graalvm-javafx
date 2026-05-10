@@ -153,6 +153,10 @@
             "float",
             "float"
           ]
+        },
+        {
+          "name": "notifySettingsChanged",
+          "parameterTypes": []
         }
       ]
     },

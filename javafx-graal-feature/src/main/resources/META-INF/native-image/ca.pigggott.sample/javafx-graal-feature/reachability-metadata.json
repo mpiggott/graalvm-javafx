@@ -350,6 +350,84 @@
       ]
     },
     {
+      "type": "com.sun.glass.ui.gtk.GtkApplication",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "display"
+        },
+        {
+          "name": "screen"
+        },
+        {
+          "name": "visualID"
+        }
+      ]
+    },
+    {
+      "type": "com.sun.glass.ui.gtk.GtkPixels",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "int",
+            "int",
+            "java.nio.ByteBuffer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.sun.glass.ui.gtk.GtkPlatformFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.glass.ui.gtk.GtkView",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "notifyInputMethodCandidateRelativePosRequest",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "notifyInputMethodLinux",
+          "parameterTypes": [
+            "java.lang.String",
+            "int",
+            "int",
+            "byte"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.sun.glass.ui.gtk.GtkWindow",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "dragAreaHitTest",
+          "parameterTypes": [
+            "int",
+            "int"
+          ]
+        },
+        {
+          "name": "notifyStateChanged",
+          "parameterTypes": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
       "type": "com.sun.glass.ui.mac.MacApplication",
       "jniAccessible": true,
       "methods": [
@@ -793,6 +871,15 @@
       ]
     },
     {
+      "type": "com.sun.prism.es2.X11GLFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
       "type": "com.sun.prism.mtl.MTLPipeline",
       "jniAccessible": true,
       "methods": [
@@ -1194,6 +1281,36 @@
     {
       "module": "javafx.graphics",
       "glob": "libprism_es2.dylib"
+    },
+    {
+      "glob": "com/sun/prism/es2/glsl/FillPgram_Color.frag"
+    },
+    {
+      "glob": "com/sun/prism/es2/glsl/Solid_TextureFirstPassLCD.frag"
+    },
+    {
+      "glob": "com/sun/prism/es2/glsl/Solid_TextureRGB.frag"
+    },
+    {
+      "glob": "com/sun/prism/es2/glsl/Solid_TextureSecondPassLCD.frag"
+    },
+    {
+      "glob": "libglass.so"
+    },
+    {
+      "glob": "libglassgtk3.so"
+    },
+    {
+      "glob": "libjavafx_font.so"
+    },
+    {
+      "glob": "libjavafx_font_freetype.so"
+    },
+    {
+      "glob": "libjavafx_font_pango.so"
+    },
+    {
+      "glob": "libprism_es2.so"
     },
     {
       "bundle": "com.sun.javafx.tk.quantum.QuantumMessagesBundle"

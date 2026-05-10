@@ -40,7 +40,18 @@ final class FxUnix {
 
 	static final List<String> JNI = List.of(
 			"com.sun.glass.ui.Application",
-			"com.sun.glass.ui.gtk.GtkPlatformFactory",
+			"com.sun.glass.ui.View",
+			"com.sun.glass.ui.Window",
+			"com.sun.glass.ui.Cursor",
+			"com.sun.glass.ui.Pixels",
+			"com.sun.glass.ui.Timer",
+			"com.sun.glass.ui.Screen",
+			"com.sun.glass.ui.MenuBar",
+			"com.sun.glass.ui.Menu",
+			"com.sun.glass.ui.MenuItem",
+			"com.sun.glass.ui.CommonDialogs",
+			"com.sun.glass.ui.Clipboard",
+			"com.sun.glass.ui.ClipboardAssistance",
 			"com.sun.javafx.tk.quantum.QuantumToolkit",
 			"com.sun.prism.GraphicsPipeline",
 			"com.sun.prism.es2.X11GLFactory",
@@ -68,7 +79,6 @@ final class FxUnix {
 			"com.sun.javafx.font.fontconfig.FontConfig",
 			"com.sun.javafx.font.FontConfigManager",
 			"com.sun.javafx.font.FontConfigManager$FcCompFont",
-			"com.sun.javafx.font.FontConfigManager$FontConfigFont",
 			"com.sun.javafx.font.freetype.FTFontFile",
 			"com.sun.prism.es2.X11GLContext"
 	);

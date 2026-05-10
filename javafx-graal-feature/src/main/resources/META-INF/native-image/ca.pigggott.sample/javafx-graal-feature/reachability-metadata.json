@@ -336,6 +336,10 @@
       "jniAccessible": true,
       "methods": [
         {
+          "name": "isEnabled",
+          "parameterTypes": []
+        },
+        {
           "name": "notifyClose",
           "parameterTypes": []
         },
@@ -364,9 +368,30 @@
           "parameterTypes": []
         },
         {
+          "name": "notifyLevelChanged",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "notifyMove",
+          "parameterTypes": [
+            "int",
+            "int"
+          ]
+        },
+        {
           "name": "notifyMoveToAnotherScreen",
           "parameterTypes": [
             "com.sun.glass.ui.Screen"
+          ]
+        },
+        {
+          "name": "notifyResize",
+          "parameterTypes": [
+            "int",
+            "int",
+            "int"
           ]
         },
         {

@@ -96,9 +96,10 @@ final class FxUnix {
 			"com.sun.javafx.font.fontconfig.FontConfig",
 			"com.sun.javafx.font.FontConfigManager",
 			"com.sun.javafx.font.FontConfigManager$FcCompFont",
+			"com.sun.javafx.font.FontConfigManager$FontConfigFont",
 			"com.sun.javafx.font.freetype.FTFontFile",
 			"com.sun.prism.es2.X11GLContext"
 	);
 
-	static final List<String> PREREG = List.of("prism_sw", "prism_es2", "glassgtk3", "glass", "glass_monocle", "javafx_font", "javafx_font_freetype", "javafx_font_pango", "javafx_iio");;
+	static final List<String> PREREG = List.of("prism_sw", "prism_es2", "glassgtk3", "glass", "glass_monocle", "javafx_font", "javafx_font_freetype", "javafx_font_pango", "javafx_iio");
 }

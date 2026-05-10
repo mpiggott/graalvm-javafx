@@ -25,6 +25,7 @@
 	<modules>
 		<module>javafx-graal-feature</module>
 		<module>javafx-sample</module>
+		<module>reachability-diff</module>
 	</modules>
 
 	<dependencyManagement>

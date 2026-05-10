@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>ca.piggott.graal.javafx</groupId>
+		<artifactId>graal-javafx-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>javafx-sample</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>ca.piggott.graal.javafx</groupId>
+			<artifactId>javafx-graal-feature</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.8</version>
+				<executions>
+					<execution>
+						<!-- Default configuration for running -->
+						<!-- Usage: mvn clean javafx:run -->
+						<id>default-cli</id>
+						<configuration>
+							<mainClass>ca.piggott.graal.javafx.sample.App</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- 
+					https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
+				-->
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>build-native</id>
+						<goals>
+							<goal>compile-no-fork</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>ca.piggott.graal.javafx.sample.App</mainClass>
+					<verbose>true</verbose>
+					<quickBuild>true</quickBuild>
+					<buildArgs combine.children="append">
+						<buildArg>--enable-sbom=false</buildArg>
+						<buildArg>-H:+UnlockExperimentalVMOptions</buildArg>
+					</buildArgs>
+					<jvmArgs>
+						<jvmArg>--enable-native-access=ALL-UNNAMED</jvmArg>
+					</jvmArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1322,10 +1322,20 @@
       "jniAccessible": true,
       "methods": [
         {
+          "name": "containsKey",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        },
+        {
           "name": "get",
           "parameterTypes": [
             "java.lang.Object"
           ]
+        },
+        {
+          "name": "keySet",
+          "parameterTypes": []
         },
         {
           "name": "put",

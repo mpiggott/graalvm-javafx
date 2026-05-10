@@ -442,6 +442,12 @@
         {
           "name": "visualID"
         }
+      ],
+      "methods": [
+        {
+          "name": "GetApplication",
+          "parameterTypes": []
+        }
       ]
     },
     {

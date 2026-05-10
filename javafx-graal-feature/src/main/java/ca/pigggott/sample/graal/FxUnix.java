@@ -66,6 +66,8 @@ final class FxUnix {
 			"com.sun.javafx.font.PGFont",
 			"com.sun.javafx.font.LogicalFont",
 			"com.sun.javafx.font.fontconfig.FontConfig",
+			"com.sun.javafx.font.FontConfigManager",
+			"com.sun.javafx.font.FontConfigManager$FcCompFont",
 			"com.sun.javafx.font.freetype.FTFontFile",
 			"com.sun.prism.es2.X11GLContext"
 	);

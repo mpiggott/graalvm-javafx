@@ -39,6 +39,8 @@ final class FxUnix {
 			"libjavafx_font_pango.so");
 
 	static final List<String> JNI = List.of(
+			"com.sun.glass.ui.Application",
+			"com.sun.prism.GraphicsPipeline",
 			"com.sun.prism.es2.X11GLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
 			"com.sun.prism.es2.ES2Context",

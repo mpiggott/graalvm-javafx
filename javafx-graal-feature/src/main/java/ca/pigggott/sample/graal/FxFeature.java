@@ -78,11 +78,7 @@ public class FxFeature implements Feature {
 					RuntimeJNIAccess.register(clazz);
 					RuntimeJNIAccess.register(clazz.getDeclaredConstructors());
 					RuntimeJNIAccess.register(clazz.getDeclaredFields());
-					for (Method method : clazz.getDeclaredMethods()) {
-						if (Modifier.isNative(method.getModifiers())) {
-							RuntimeJNIAccess.register(method);
-						}
-					}
+					RuntimeJNIAccess.register(clazz.getDeclaredMethods());
 				}
 		}
 	}

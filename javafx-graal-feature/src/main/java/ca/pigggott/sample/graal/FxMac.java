@@ -40,6 +40,8 @@ final class FxMac {
 	static final List<String> PREREG = List.of("glass", "javafx_font", "javafx_iio", "prism_es2");
 
 	static final List<String> JNI = List.of(
+			"com.sun.glass.ui.Application",
+			"com.sun.prism.GraphicsPipeline",
 			"com.sun.prism.es2.MacGLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
 			"com.sun.prism.es2.ES2Context",

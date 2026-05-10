@@ -27,7 +27,24 @@ import java.util.List;
 
 final class FxWin {
 
-	static final List<String> JNI = List.of("com.sun.prism.d3d.D3DPipeline", "com.sun.prism.d3d.D3DContext", "com.sun.prism.sw.SWPipeline");
+	static final List<String> JNI = List.of(
+			"com.sun.glass.ui.Application",
+			"com.sun.prism.GraphicsPipeline",
+			"com.sun.glass.ui.win.WinApplication",
+			"com.sun.glass.ui.win.WinWindow",
+			"com.sun.glass.ui.win.WinView",
+			"com.sun.glass.ui.win.WinCursor",
+			"com.sun.glass.ui.win.WinPixels",
+			"com.sun.glass.ui.win.WinTimer",
+			"com.sun.glass.ui.win.WinMenuBarDelegate",
+			"com.sun.glass.ui.win.WinMenuDelegate",
+			"com.sun.glass.ui.win.WinCommonDialogs",
+			"com.sun.glass.ui.win.WinPasteboard",
+			"com.sun.glass.ui.win.WinAccessible",
+			"com.sun.glass.ui.win.WinClipboard",
+			"com.sun.prism.d3d.D3DPipeline",
+			"com.sun.prism.d3d.D3DContext",
+			"com.sun.prism.sw.SWPipeline");
 
 	static final List<String> PREREG = List.of("prism_sw", "glass", "glass_monocle", "javafx_font", "javafx_iio");
 

@@ -29,6 +29,8 @@ final class FxWin {
 
 	static final List<String> JNI = List.of("com.sun.prism.d3d.D3DPipeline", "com.sun.prism.d3d.D3DContext", "com.sun.prism.sw.SWPipeline");
 
+	static final List<String> PREREG = List.of("prism_sw", "glass", "glass_monocle", "javafx_font", "javafx_iio");
+
 	static final List<String> LIBS = List.of("api-ms-win-core-console-l1-1-0.dll",
 			"api-ms-win-core-console-l1-2-0.dll", "api-ms-win-core-datetime-l1-1-0.dll",
 			"api-ms-win-core-debug-l1-1-0.dll", "api-ms-win-core-errorhandling-l1-1-0.dll",

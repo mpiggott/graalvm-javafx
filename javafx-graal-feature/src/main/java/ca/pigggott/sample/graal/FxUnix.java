@@ -25,38 +25,37 @@ package ca.pigggott.sample.graal;
 
 import java.util.List;
 
-final class FxMac {
-
+final class FxUnix {
 	static final List<String> LIBS = List.of(
-			"libdecora_sse.dylib",
-			"libglass.dylib",
-			"libjavafx_font.dylib",
-			"libjavafx_iio.dylib",
-			"libprism_common.dylib",
-			"libprism_es2.dylib",
-			"libprism_mtl.dylib",
-			"libprism_sw.dylib");
-
-	static final List<String> PREREG = List.of("glass", "javafx_font", "javafx_iio", "prism_es2");
+			"libprism_common.so",
+			"libjavafx_font.so",
+			"libprism_es2.so",
+			"libglass.so",
+			"libjavafx_iio.so",
+			"libglassgtk3.so",
+			"libdecora_sse.so",
+			"libjavafx_font_freetype.so",
+			"libprism_sw.so",
+			"libjavafx_font_pango.so");
 
 	static final List<String> JNI = List.of(
-			"com.sun.prism.es2.MacGLFactory",
+			"com.sun.prism.es2.X11GLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
 			"com.sun.prism.es2.ES2Context",
-			"com.sun.prism.mtl.MTLPipeline",
-			"com.sun.prism.mtl.MTLContext",
-			"com.sun.glass.ui.mac.MacApplication",
-			"com.sun.glass.ui.mac.MacWindow",
-			"com.sun.glass.ui.mac.MacView",
-			"com.sun.glass.ui.mac.MacCursor",
-			"com.sun.glass.ui.mac.MacPixels",
-			"com.sun.glass.ui.mac.MacTimer",
-			"com.sun.glass.ui.mac.MacMenuBarDelegate",
-			"com.sun.glass.ui.mac.MacMenuDelegate",
-			"com.sun.glass.ui.mac.MacCommonDialogs",
-			"com.sun.glass.ui.mac.MacPasteboard",
-			"com.sun.glass.ui.mac.MacAccessible",
-			"com.sun.glass.ui.mac.MacClipboard"
+			"com.sun.glass.ui.gtk.GtkApplication",
+			"com.sun.glass.ui.gtk.GtkWindow",
+			"com.sun.glass.ui.gtk.GtkView",
+			"com.sun.glass.ui.gtk.GtkCursor",
+			"com.sun.glass.ui.gtk.GtkPixels",
+			"com.sun.glass.ui.gtk.GtkTimer",
+			"com.sun.glass.ui.gtk.GtkMenuBarDelegate",
+			"com.sun.glass.ui.gtk.GtkMenuDelegate",
+			"com.sun.glass.ui.gtk.GtkPlatformFactory",
+			"com.sun.glass.ui.gtk.GtkCommonDialogs",
+			"com.sun.glass.ui.gtk.GtkPasteboard",
+			"com.sun.glass.ui.gtk.GtkAccessible",
+			"com.sun.glass.ui.gtk.GtkClipboard"
 	);
 
+	static final List<String> PREREG = List.of("prism_sw", "prism_es2", "glassgtk3", "glass", "glass_monocle");;
 }

@@ -53,23 +53,20 @@ public class FxFeature implements Feature {
 		}
 		else {
 			System.out.println("beforeAnalysis - other");
+			registerLibraries(FxUnix.LIBS);
+			registerJni(access, FxUnix.JNI);
 		}
 	}
 
 	@Override
 	public void duringSetup(DuringSetupAccess access) {
 		if (isWin()) {
-
+			FxWin.PREREG.forEach(NativeLibrarySupport.singleton()::preregisterUninitializedBuiltinLibrary);
 		}
 		else if (isMac()) {
-			List.of("glass", "javafx_font", "javafx_iio", "prism_es2")
-					.forEach(NativeLibrarySupport.singleton()::preregisterUninitializedBuiltinLibrary);
+			FxMac.PREREG.forEach(NativeLibrarySupport.singleton()::preregisterUninitializedBuiltinLibrary);
 		} else {
-			NativeLibrarySupport.singleton().preregisterUninitializedBuiltinLibrary("prism_sw");
-			NativeLibrarySupport.singleton().preregisterUninitializedBuiltinLibrary("prism_es2");
-			NativeLibrarySupport.singleton().preregisterUninitializedBuiltinLibrary("glassgtk3");
-			NativeLibrarySupport.singleton().preregisterUninitializedBuiltinLibrary("glass");
-			NativeLibrarySupport.singleton().preregisterUninitializedBuiltinLibrary("glass_monocle");
+			FxUnix.PREREG.forEach(NativeLibrarySupport.singleton()::preregisterUninitializedBuiltinLibrary);
 		}
 
 	}

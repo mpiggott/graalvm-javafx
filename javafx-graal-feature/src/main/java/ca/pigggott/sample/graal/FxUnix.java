@@ -42,6 +42,7 @@ final class FxUnix {
 			"com.sun.prism.es2.X11GLFactory",
 			"com.sun.prism.es2.ES2Pipeline",
 			"com.sun.prism.es2.ES2Context",
+			"com.sun.prism.es2.GLFactory",
 			"com.sun.glass.ui.gtk.GtkApplication",
 			"com.sun.glass.ui.gtk.GtkWindow",
 			"com.sun.glass.ui.gtk.GtkView",

@@ -1146,11 +1146,22 @@
     },
     {
       "type": "java.nio.ByteBuffer",
+      "jniAccessible": true,
       "methods": [
+        {
+          "name": "array",
+          "parameterTypes": []
+        },
         {
           "name": "order",
           "parameterTypes": [
             "java.nio.ByteOrder"
+          ]
+        },
+        {
+          "name": "wrap",
+          "parameterTypes": [
+            "byte[]"
           ]
         }
       ]

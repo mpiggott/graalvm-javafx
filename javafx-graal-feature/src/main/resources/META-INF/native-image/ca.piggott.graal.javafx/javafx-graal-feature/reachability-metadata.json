@@ -765,6 +765,16 @@
       "type": "com.sun.javafx.PreviewFeature"
     },
     {
+      "type":"com.sun.javafx.font.PrismFontFactory",
+      "jniAccessible": true,
+      "methods":[
+        {
+          "name":"getSystemFontSizeNative",
+          "parameterTypes":[]
+        }
+      ]
+    },
+    {
       "type": "com.sun.javafx.font.coretext.CGAffineTransform",
       "jniAccessible": true,
       "fields": [

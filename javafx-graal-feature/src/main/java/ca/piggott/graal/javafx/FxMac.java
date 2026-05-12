@@ -57,7 +57,6 @@ final class FxMac {
 			"com.sun.glass.ui.mac.MacMenuDelegate",
 			"com.sun.glass.ui.mac.MacCommonDialogs",
 			"com.sun.glass.ui.mac.MacPasteboard",
-			"com.sun.glass.ui.mac.MacAccessible",
 			"com.sun.glass.ui.mac.MacClipboard",
 			"com.sun.javafx.font.PrismFontFactory",
 			"com.sun.javafx.font.PrismFontLoader",

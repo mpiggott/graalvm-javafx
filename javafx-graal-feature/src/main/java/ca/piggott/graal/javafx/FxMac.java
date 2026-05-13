@@ -10,7 +10,6 @@ package ca.piggott.graal.javafx;
 import java.util.List;
 
 final class FxMac {
-
 	static final List<String> LIBS = List.of(
 			"libdecora_sse.dylib",
 			"libglass.dylib",
@@ -66,5 +65,4 @@ final class FxMac {
 			"com.sun.javafx.font.LogicalFont",
 			"com.sun.javafx.font.coretext.CTFontFile"
 	);
-
 }

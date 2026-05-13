@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ca.piggott.graal.javafx</groupId>
+		<artifactId>graal-javafx-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>javafx-ikonli</artifactId>
+
+	<properties>
+		<ikonli.version>12.3.1</ikonli.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>ca.piggott.graal.javafx</groupId>
+			<artifactId>graal-support</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.graalvm.sdk</groupId>
+			<artifactId>nativeimage</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.graalvm.nativeimage</groupId>
+			<artifactId>svm</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kordamp.ikonli</groupId>
+			<artifactId>ikonli-javafx</artifactId>
+			<version>${ikonli.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kordamp.ikonli</groupId>
+			<artifactId>ikonli-feather-pack</artifactId>
+			<version>${ikonli.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kordamp.ikonli</groupId>
+			<artifactId>ikonli-material2-pack</artifactId>
+			<version>${ikonli.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kordamp.ikonli</groupId>
+			<artifactId>ikonli-materialdesign2-pack</artifactId>
+			<version>${ikonli.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+</project>

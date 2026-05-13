@@ -1,0 +1,139 @@
+{
+	"reflection": [
+		{
+			"type": "org.kordamp.ikonli.IkonliIkonResolver",
+			"methods": [
+				{
+					"name": "<init>",
+					"parameterTypes": []
+				}
+			]
+		},
+		{
+			"type": "org.kordamp.ikonli.feather.FeatherIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2ALIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2MZIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2OutlinedALIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2OutlinedMZIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2RoundALIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2RoundMZIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2SharpALIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.material2.Material2SharpMZIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignAIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignBIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignCIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignDIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignEIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignFIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignGIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignHIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignIIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignJIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignKIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignLIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignMIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignNIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignOIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignPIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignQIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignRIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignSIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignTIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignUIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignVIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignWIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignXIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignYIkonHandler"
+		},
+		{
+			"type": "org.kordamp.ikonli.materialdesign2.MaterialDesignZIkonHandler"
+		}
+	],
+	"resources": [
+	{
+		"module": "org.kordamp.ikonli.core",
+		"glob": "META-INF/resources/ikonli/**/ikonli.ttf"
+	},
+	{
+		"module": "org.kordamp.ikonli.feather",
+		"glob": "META-INF/resources/feather/**/feather.ttf"
+	},
+	{
+		"module": "org.kordamp.ikonli.material2",
+		"glob": "META-INF/resources/material2/**/*.ttf"
+	},
+	{
+		"module": "org.kordamp.ikonli.material2",
+		"glob": "META-INF/resources/materialdesignicons2/**/*.ttf"
+	},
+	{
+		"glob": "META-INF/services/org.kordamp.ikonli.*"
+	}
+	]
+}

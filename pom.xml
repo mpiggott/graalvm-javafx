@@ -25,6 +25,8 @@
 	<modules>
 		<module>javafx-graal-feature</module>
 		<module>javafx-sample</module>
+		<module>javafx-ikonli</module>
+		<module>graal-support</module>
 	</modules>
 
 	<dependencyManagement>
@@ -32,6 +34,12 @@
 		<dependency>
 			<groupId>ca.piggott.graal.javafx</groupId>
 			<artifactId>javafx-graal-feature</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ca.piggott.graal.javafx</groupId>
+			<artifactId>graal-support</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

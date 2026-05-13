@@ -98,5 +98,4 @@ final class FxWin {
 			"decora_sse.dll", "glass.dll", "javafx_font.dll", "javafx_iio.dll", "msvcp140_1.dll", "msvcp140_2.dll",
 			"msvcp140.dll", "prism_common.dll", "prism_d3d.dll", "prism_sw.dll", "ucrtbase.dll", "vcruntime140_1.dll",
 			"vcruntime140.dll");
-
 }

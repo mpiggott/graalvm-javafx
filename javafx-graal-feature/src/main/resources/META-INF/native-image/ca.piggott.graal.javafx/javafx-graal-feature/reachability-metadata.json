@@ -19,6 +19,14 @@
           "parameterTypes": []
         },
         {
+          "name": "GetApplication",
+          "parameterTypes": []
+        },
+        {
+          "name": "getName",
+          "parameterTypes": []
+        },
+        {
           "name": "getScaleFactor",
           "parameterTypes": [
             "int",
@@ -6183,6 +6191,9 @@
     },
     {
       "bundle": "com/sun/glass/ui/win/themes"
+    },
+    {
+      "bundle": "com/sun/javafx/scene/control/skin/resources/controls"
     }
   ]
 }

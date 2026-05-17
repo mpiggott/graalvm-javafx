@@ -600,12 +600,35 @@
     },
 
     {
-      "type": "com.sun.glass.ui.win.WinApplication"
+      "type": "com.sun.glass.ui.win.WinApplication",
+      "jniAccessible":  true,
+      "methods":  [
+        {
+          "parameterTypes":  [],
+          "name":  "staticScreenConfigChanged"
+        },
+        {
+          "parameterTypes":  [],
+          "name":  "staticViewConfigChanged"
+        }
+      ]
     },
     {
       "type": "com.sun.glass.ui.win.WinDnDClipboard",
       "jniAccessible": true,
+      "fields": [
+        {
+          "name": "name"
+        },
+        {
+          "name": "ptr"
+        }
+      ],
       "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
         {
           "name": "getInstance",
           "parameterTypes": []
@@ -693,6 +716,9 @@
       "type": "com.sun.glass.ui.win.WinSystemClipboard",
       "jniAccessible": true,
       "fields": [
+        {
+          "name": "name"
+        },
         {
           "name": "ptr"
         }
@@ -6194,6 +6220,12 @@
     },
     {
       "bundle": "com/sun/javafx/scene/control/skin/resources/controls"
+    },
+    {
+      "glob": "com/sun/prism/d3d/hlsl/*.obj"
+    },
+    {
+      "glob": "com/sun/scenario/effect/impl/hw/d3d/hlsl/*.obj"
     }
   ]
 }

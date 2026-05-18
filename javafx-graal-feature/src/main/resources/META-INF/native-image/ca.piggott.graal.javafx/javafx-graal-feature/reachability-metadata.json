@@ -453,6 +453,10 @@
       ],
       "methods": [
         {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
           "name": "GetApplication",
           "parameterTypes": []
         }
@@ -799,9 +803,31 @@
       "type": "com.sun.javafx.PreviewFeature"
     },
     {
+      "type": "com.sun.javafx.font.LogicalFontFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.javafx.font.freetype.FTFontFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
       "type":"com.sun.javafx.font.PrismFontFactory",
       "jniAccessible": true,
       "methods":[
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
         {
           "name":"getSystemFontSizeNative",
           "parameterTypes":[]

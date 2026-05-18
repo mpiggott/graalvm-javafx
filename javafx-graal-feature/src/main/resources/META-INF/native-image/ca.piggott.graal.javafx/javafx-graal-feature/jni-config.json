@@ -1,0 +1,22 @@
+[
+  {
+    "name": "com.sun.javafx.font.PrismFontFactory",
+    "methods": [
+      {
+        "name": "getSystemFontSizeNative",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "com.sun.glass.ui.win.WinApplication",
+    "methods": [
+      {
+        "name": "_runLoop",
+        "parameterTypes": [
+          "java.lang.Runnable"
+        ]
+      }
+    ]
+  }
+]

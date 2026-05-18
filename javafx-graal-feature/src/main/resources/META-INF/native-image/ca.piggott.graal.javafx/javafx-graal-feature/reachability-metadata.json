@@ -1338,6 +1338,15 @@
       ]
     },
     {
+      "type": "com.sun.scenario.effect.impl.hw.d3d.D3DShaderSource",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
       "type": "com.sun.scenario.effect.impl.es2.ES2ShaderSource",
       "methods": [
         {
